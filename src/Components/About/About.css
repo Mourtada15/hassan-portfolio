@@ -1,0 +1,24 @@
+.about-wrapper {
+  padding: 0rem !important;
+}
+
+.about-icon {
+padding: 4rem;
+}
+
+.about-icon img {
+  width: 100%;
+}
+
+.about-intro p {
+  line-height: 1.8rem;
+  }
+
+@media (max-width: 768px) {
+  .about-wrapper {
+    padding: 6rem 1rem !important;
+  }
+  .about-intro p {
+    text-align: justify;
+  }
+}

@@ -1,0 +1,30 @@
+import "./Header.css";
+import ProfilePic from "../../assets/profile01.png";
+
+const Header = () => {
+  return (
+    <header className="header-wrapper container-lg d-flex flex-column flex-lg-row justify-content-center align-items-center text-start gap-5">
+      <div className="profile-container">
+        <img src={ProfilePic} alt="" />
+      </div>
+      <div>
+        <p className="m-0">Hi. I'm</p>
+        <h1>Hassan Mourtada,</h1>
+        <p>
+          A <span style={{ color: "#55c2a0" }}>Full stack Developer</span> with
+          10 years of experience creating succeaaful websites..
+        </p>
+        <a
+          href="/Hassan_Mourtada_Resume.pdf"
+          download
+          className="btn action-btn mt-4"
+          to=""
+        >
+          Download my resume
+        </a>
+      </div>
+    </header>
+  );
+};
+
+export default Header;
