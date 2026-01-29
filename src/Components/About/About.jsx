@@ -8,7 +8,7 @@ const About = () => {
         <div className="about-intro col-8 d-flex text-center text-sm-start justify-content-center flex-column gap-3">
           <div>
             <h2>About me</h2>
-            <hr className="mt-0" style={{ color: "#ff715a" }} />
+            <hr style={{ color: "#ff715a" }} />
           </div>
           <div>
             <p>
@@ -23,7 +23,7 @@ const About = () => {
               technologies, refining my problem-solving skills, and
               collaborating with others to turn ideas into real, working
               products.
-            </p>{" "}
+            </p>
             <p>
               Beyond traditional development, I’m curious about AI and enjoy
               experimenting with AI tools to improve development workflows and

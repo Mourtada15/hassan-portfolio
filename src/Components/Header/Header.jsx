@@ -18,10 +18,9 @@ const Header = () => {
           products.
         </p>
         <a
-          href="/Hassan_Mourtada_Resume.pdf"
-          download
+          href="/Hassan Mourtada - CV.pdf"
+          download="Hassan Mourtada - CV.pdf"
           className="btn action-btn mt-4"
-          to=""
         >
           Download my resume
         </a>

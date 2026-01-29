@@ -6,6 +6,10 @@
   width: 100%;
 }
 
+.project-card h4 {
+  margin-bottom: 1.5rem;
+}
+
 @media (max-width: 992px) {
   .project-card {
     gap: 2rem !important;
