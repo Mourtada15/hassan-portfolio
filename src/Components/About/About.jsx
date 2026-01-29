@@ -9,16 +9,25 @@ const About = () => {
           <h2>About me</h2>
           <hr className="mt-0" style={{ color: "#ff715a" }} />
         </div>
-        <p>
-          I specialize in building modern web applications using JavaScript,
-          React, and Node.js, with experience across the full stack. I enjoy
-          creating clean, scalable, and responsive solutions that deliver a
-          smooth user experience. Collaboration and continuous learning are at
-          the heart of my work—I like exploring new technologies, improving my
-          code, and bringing projects from idea to reality. Outside of coding,
-          I’m passionate about experimenting with AI tools to enhance web
-          development and streamline workflows.
-        </p>
+        <div>
+          <p>
+            I’m a passionate Full-Stack Web Developer who enjoys building
+            modern, user-focused web applications. I work mainly with
+            JavaScript, React, and Node.js, and I’m comfortable handling both
+            frontend and backend development.
+          </p>
+          <p>
+            What drives me most is creating clean, scalable solutions that are
+            easy to use and easy to maintain. I enjoy learning new technologies,
+            refining my problem-solving skills, and collaborating with others to
+            turn ideas into real, working products.
+          </p>{" "}
+          <p>
+            Beyond traditional web development, I’m curious about AI and enjoy
+            experimenting with AI tools to improve development workflows and
+            enhance web experiences.
+          </p>
+        </div>
       </div>
       <div className="about-icon d-flex justify-content-center justify-content-lg-end">
         <img src={Icon} alt="" />
