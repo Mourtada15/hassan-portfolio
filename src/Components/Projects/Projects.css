@@ -1,10 +1,19 @@
 .projects-wrapper {
-  padding: 4rem 0 !important;
+  padding: 4rem 3rem !important;
 }
 
-.test02 {
-  min-width: 500px;
-  max-width: 500px;
-  height: 400px;
-  border: 1px solid #ff715a;
+.project-img img {
+  width: 100%;
+}
+
+@media (max-width: 992px) {
+  .project-card {
+    gap: 2rem !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .projects-wrapper {
+    padding: 4rem 1rem !important;
+  }
 }
