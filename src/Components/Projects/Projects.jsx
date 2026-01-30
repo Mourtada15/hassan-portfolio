@@ -6,12 +6,12 @@ import PH03 from "../../assets/ph03.jpg";
 const Projects = () => {
   return (
     <section className="projects-wrapper container-lg d-flex flex-column gap-4">
-      <h2>Projects</h2>
+      <div>
+        <h2>Projects</h2>
+        <hr style={{ color: "#ff715a" }} />
+      </div>
       <div className="d-flex flex-column gap-4">
-        <div className="project-card row flex-column flex-lg-row justify-content-center align-items-start align-items-sm-center">
-          <div className="project-img col-12 col-sm-6">
-            <img src={PH01} alt="" />
-          </div>
+        <div className="project-card row g-0 flex-column flex-sm-row justify-content-center align-items-start align-items-sm-center">
           <div className="col-12 col-lg-6">
             <h4>Project One title</h4>
             <p>
@@ -21,11 +21,12 @@ const Projects = () => {
               voluptate nulla sint.
             </p>
           </div>
-        </div>
-        <div className="project-card row flex-column flex-lg-row justify-content-center align-items-start align-items-sm-center">
           <div className="project-img col-12 col-sm-6">
-            <img src={PH02} alt="" />
+            <img src={PH01} alt="" />
           </div>
+        </div>
+
+        <div className="project-card row g-0 flex-column flex-lg-row justify-content-center align-items-start align-items-sm-center">
           <div className="col-12 col-lg-6">
             <h4>Projects two title</h4>
             <p>
@@ -35,11 +36,11 @@ const Projects = () => {
               voluptate nulla sint.
             </p>
           </div>
-        </div>
-        <div className="project-card row flex-column flex-lg-row justify-content-center align-items-start align-items-sm-center">
           <div className="project-img col-12 col-sm-6">
-            <img src={PH03} alt="" />
+            <img src={PH02} alt="" />
           </div>
+        </div>
+        <div className="project-card row g-0 flex-column flex-lg-row justify-content-center align-items-start align-items-sm-center">
           <div className="col-12 col-lg-6">
             <h4>Projects three title</h4>
             <p>
@@ -48,6 +49,9 @@ const Projects = () => {
               dolorum ullam quidem molestias, accusamus a porro neque, hic quo
               voluptate nulla sint.
             </p>
+          </div>
+          <div className="project-img col-12 col-sm-6">
+            <img src={PH03} alt="" />
           </div>
         </div>
       </div>

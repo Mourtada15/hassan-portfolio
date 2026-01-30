@@ -1,7 +1,5 @@
 .header-wrapper {
-  padding: 4rem;
-  /* margin-top: 2rem; */
-  /* margin-bottom: 2rem; */
+  padding: 3rem !important;
 }
 
 .profile-container {
@@ -37,4 +35,10 @@
 
 .action-btn:hover {
   transform: scale(1.04);
+}
+
+@media (max-width: 768px) {
+  .header-wrapper {
+  padding: 1rem !important;
+}
 }
