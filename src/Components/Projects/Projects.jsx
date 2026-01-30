@@ -16,7 +16,7 @@ const Projects = () => {
           <div className="content-card col-12 col-lg-6 d-flex flex-column gap-3 gap-sm-4">
             <div>
               <div className="mb-4">
-                <h4>Revent — Event Platform Website</h4>
+                <h4>Revent</h4>
                 <i>Frontend Web Application (Client Project)</i>
               </div>
               <p>
@@ -35,7 +35,7 @@ const Projects = () => {
                   <li>Collaborated via PR reviews and team workflows</li>
                 </ul>
               </p>
-              <div className="project-actions d-flex align-items-center gap-4">
+              <div className="project-actions d-flex flex-wrap align-items-center gap-4">
                 <Link
                   to="https://reventme.com/"
                   target="_blank"
@@ -50,7 +50,7 @@ const Projects = () => {
               </div>
             </div>
 
-            <div className="stack-badges d-flex gap-2 mt-4 mt-lg-0">
+            <div className="stack-badges d-flex flex-wrap gap-2 mt-4 mt-lg-0">
               <span className="badge">React</span>
               <span className="badge">Vite</span>
               <span className="badge">JavaScript</span>
@@ -101,21 +101,21 @@ const Projects = () => {
                   </li>
                 </ul>
               </p>
-              <div className="project-actions d-flex align-items-center gap-4">
-                <a
-                  href="https://unilinktrading.com/"
+              <div className="project-actions d-flex flex-wrap align-items-center gap-4">
+                <Link
+                  to="https://unilinktrading.com/"
                   target="_blank"
                   className="btn action-btn live-demo"
                 >
                   View Live Website
-                </a>
+                </Link>
                 <i>Developed as part of a professional team.</i>
                 {/* <a href="#" target="_blank" className="btn action-btn">
                   GitHub
                 </a> */}
               </div>
             </div>
-            <div className="stack-badges d-flex gap-2 mt-4 mt-lg-0">
+            <div className="stack-badges d-flex flex-wrap gap-2 mt-4 mt-lg-0">
               <span className="badge">React</span>
               <span className="badge">Vite</span>
               <span className="badge">JavaScript</span>
@@ -167,21 +167,21 @@ const Projects = () => {
                   </li>
                 </ul>
               </p>
-              <div className="project-actions align-items-center d-flex gap-4">
-                <a
-                  href="https://betacapitalx.com/"
+              <div className="project-actions d-flex flex-wrap align-items-center gap-4">
+                <Link
+                  to="https://betacapitalx.com/"
                   target="_blank"
                   className="btn action-btn live-demo"
                 >
                   View Live Website
-                </a>
+                </Link>
                 <i>Developed as part of a professional team.</i>
                 {/* <a href="#" target="_blank" className="btn action-btn github">
                   GitHub
                 </a> */}
               </div>
             </div>
-            <div className="stack-badges d-flex gap-2 mt-4 mt-lg-0">
+            <div className="stack-badges d-flex flex-wrap gap-2 mt-4 mt-lg-0">
               <span className="badge">React</span>
               <span className="badge">react-i18next</span>
               <span className="badge">Vite</span>
