@@ -7,49 +7,58 @@
 }
 
 .project-img {
-  display: flex;
-  justify-content: end;
   padding: 2rem;
+  text-align: end;
 }
 
 .project-img img {
   width: 50%;
   border-radius: 40px;
   transform: rotate(5deg);
+  margin-right: 2rem;
 }
 
 .project-card {
-  background: linear-gradient(
-    135deg,
-    #0b0b0b 0%,
-    #111 45%,
-    #1f4f43 70%,
-    #55c2a0 100%
-  );
-
-  border-radius: 40px;
+  background: #0b0b0b;
   padding: 2rem;
+  background-clip: padding-box, border-box;
+  background-origin: border-box;
+  background:
+    linear-gradient(#0b0b0b, #0b0b0b) padding-box,
+    linear-gradient(
+        130deg,
+        #0b0b0b 0%,
+        #111 15%,
+        #55c2a0 40%,
+        #112c25 70%,
+        #112c25 80%,
+        #55c2a0 100%
+      )
+      border-box;
+  border-radius: 40px; /* Rounded corners work with this method */
+  border: 4px solid transparent; /* A transparent border reserves space for the gradient */
 }
 
 .project-card h4 {
   margin-bottom: 1.5rem;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 992px) {
   .project-card {
     gap: 2rem !important;
   }
   .project-img img {
-  width: 80%;
-  transform: rotate(0deg);
-}
-.project-img {
-  justify-content: center;
-}
+    width: 80%;
+    transform: rotate(0deg);
+    margin-right: 0;
+  }
 }
 
 @media (max-width: 768px) {
   .projects-wrapper {
     padding: 4rem 1rem !important;
+  }
+  .project-img {
+    text-align: center;
   }
 }

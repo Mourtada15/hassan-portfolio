@@ -11,18 +11,23 @@ const Projects = () => {
         <hr style={{ color: "#ff715a" }} />
       </div>
       <div className="d-flex flex-column gap-4">
-        <div className="project-card row g-0 flex-column flex-sm-row justify-content-center align-items-start align-items-sm-center">
-          <div className="col-12 col-lg-6">
-            <h4>Project One title</h4>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora,
-              ipsam! Dignissimos tenetur possimus totam quae odio, repudiandae
-              dolorum ullam quidem molestias, accusamus a porro neque, hic quo
-              voluptate nulla sint.
-            </p>
+        <div className="project-card row g-0 justify-content-center align-items-start align-items-sm-center">
+          <div className="content-card col-12 col-lg-6">
+            <div>
+              <h4>Project One title</h4>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Tempora, ipsam! Dignissimos tenetur possimus totam quae odio,
+                repudiandae dolorum ullam quidem molestias, accusamus a porro
+                neque, hic quo voluptate nulla sint.
+              </p>
+            </div>
+            <div></div>
           </div>
           <div className="project-img col-12 col-sm-6">
-            <img src={PH01} alt="" />
+            <a href="" target="_blank" rel="noopener noreferrer">
+              <img src={PH01} alt="" />
+            </a>
           </div>
         </div>
 
@@ -37,7 +42,9 @@ const Projects = () => {
             </p>
           </div>
           <div className="project-img col-12 col-sm-6">
-            <img src={PH02} alt="" />
+            <a href="" target="_blank" rel="noopener noreferrer">
+              <img src={PH02} alt="" />
+            </a>
           </div>
         </div>
         <div className="project-card row g-0 flex-column flex-lg-row justify-content-center align-items-start align-items-sm-center">
@@ -51,7 +58,9 @@ const Projects = () => {
             </p>
           </div>
           <div className="project-img col-12 col-sm-6">
-            <img src={PH03} alt="" />
+            <a href="" target="_blank" rel="noopener noreferrer">
+              <img src={PH03} alt="" />
+            </a>
           </div>
         </div>
       </div>

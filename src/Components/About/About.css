@@ -36,4 +36,7 @@
   .about-icon {
     width: 80% !important;
   }
+  .about-intro h2 {
+    text-align: start !important;
+}
 }
