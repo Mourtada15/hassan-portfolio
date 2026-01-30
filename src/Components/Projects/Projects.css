@@ -16,6 +16,11 @@
   border-radius: 40px;
   transform: rotate(5deg);
   margin-right: 2rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.project-img img:hover {
+  transform: scale(1.1);
 }
 
 .project-card {
@@ -39,8 +44,23 @@
   border: 4px solid transparent; /* A transparent border reserves space for the gradient */
 }
 
-.project-card h4 {
-  margin-bottom: 1.5rem;
+.project-actions .live-demo {
+  background-color: #ff715a;
+}
+.project-actions .live-demo:hover  {
+  background-color: #ff715a;
+}
+
+.content-card i {
+  font-size: 14px;
+}
+
+.stack-badges .badge {
+  /* background-color: #55c2a0; */
+  background-color: #505856;
+  /* color: rgb(207, 202, 202); */
+  font-weight: 400;
+  /* border: 1px solid #ff715a; */
 }
 
 @media (max-width: 992px) {
