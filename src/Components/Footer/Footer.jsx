@@ -6,7 +6,7 @@ const Footer = () => {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="footer-wrapper d-flex flex-column justify-content-center align-items-center py-5">
+    <footer className="footer-wrapper d-flex flex-column justify-content-center align-items-center">
       <h2 className="mb-3">Hassan Mourtada</h2>
 
       <small className="mb-3 text-center">

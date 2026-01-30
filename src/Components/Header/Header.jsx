@@ -3,7 +3,7 @@ import ProfilePic from "../../assets/profile01.png";
 
 const Header = () => {
   return (
-    <header className="header-wrapper container-lg d-flex flex-column flex-lg-row justify-content-center align-items-center text-start gap-5">
+    <header id="header" className="header-wrapper container-lg d-flex flex-column flex-lg-row justify-content-center align-items-center text-start gap-5">
       <div className="profile-container">
         <img src={ProfilePic} alt="" />
       </div>

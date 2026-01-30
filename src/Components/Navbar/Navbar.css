@@ -1,0 +1,28 @@
+.navbar-wrapper {
+  padding: 1rem 3rem !important;
+  background-color: #55c2a0;
+}
+
+.navbar-container ul li a {
+  color: rgba(255, 255, 255, 0.87) !important;
+}
+
+.navbar-toggler,
+.nav-menu-button:focus {
+  box-shadow: none !important;
+  border: none !important;
+  font-size: 25px !important;
+}
+
+
+.nav-github:hover {
+  transform: scale(1.1) !important;
+  color: #ff715a;
+  /* color: hsl(0, 0%, 30%); */
+}
+
+@media (max-width: 768px) {
+  .navbar-wrapper {
+    padding: 1rem !important;
+  }
+}

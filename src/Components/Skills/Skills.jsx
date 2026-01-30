@@ -2,7 +2,7 @@ import "./Skills.css";
 
 const Skills = () => {
   return (
-    <section className="skills-wrapper">
+    <section id="skills" className="skills-wrapper">
       <div className="skills-track">
         <div className="skills-set">
           <h4>HTML5</h4>

@@ -56,11 +56,8 @@
 }
 
 .stack-badges .badge {
-  /* background-color: #55c2a0; */
   background-color: #505856;
-  /* color: rgb(207, 202, 202); */
   font-weight: 400;
-  /* border: 1px solid #ff715a; */
 }
 
 @media (max-width: 992px) {
@@ -80,5 +77,9 @@
   }
   .project-img {
     text-align: center;
+    padding: 0;
+  }
+  .project-img img {
+    width: 100%;
   }
 }
