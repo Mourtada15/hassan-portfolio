@@ -2,38 +2,55 @@
   background-color: hsl(0, 0%, 30%);
   overflow: hidden;
   width: 100%;
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 10%,
+    black 90%,
+    transparent
+  );
 }
 
+/* The moving container */
 .skills-track {
-  display: flex;
-  width: 340%; /* 🔑 EXACT geometry */
-  animation: scroll 50s linear infinite;
+  display: inline-flex;
+  width: max-content;
+  animation: scroll 45s linear infinite;
   will-change: transform;
 }
 
+/* One full set */
 .skills-set {
-  display: flex;
-  width: 50%; /* 🔑 each set = half the track */
+  display: inline-flex;
   flex-shrink: 0;
 }
 
+/* Skill item */
 .skills-wrapper h4 {
   font-size: 1rem;
   font-weight: 400;
   margin: 0;
-  padding: 1.5rem 2rem;
+  padding: 1.25rem 2rem;
   white-space: nowrap;
 }
 
+/* Pause on hover */
 .skills-wrapper:hover .skills-track {
   animation-play-state: paused;
 }
 
+/* Perfect infinite loop */
 @keyframes scroll {
   from {
     transform: translateX(0);
   }
   to {
-    transform: translateX(-50%); /* 🔑 exactly one set */
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 768px) {
+  .skills-track {
+    animation-duration: 60s;
   }
 }
