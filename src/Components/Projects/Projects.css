@@ -73,7 +73,7 @@
 
 @media (max-width: 768px) {
   .projects-wrapper {
-    padding: 4rem 1rem !important;
+    padding: 2rem 1rem !important;
   }
   .project-img {
     text-align: center;

@@ -3,7 +3,10 @@ import { projects } from "../../data/Projects";
 
 const Projects = () => {
   return (
-    <section id="projects" className="projects-wrapper container-lg d-flex flex-column gap-4">
+    <section
+      id="projects"
+      className="projects-wrapper container-lg d-flex flex-column gap-4"
+    >
       <div>
         <h2>Projects</h2>
         <hr style={{ color: "#ff715a" }} />

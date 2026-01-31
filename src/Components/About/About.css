@@ -1,5 +1,5 @@
 .about-wrapper {
-  padding: 0rem 3rem !important;
+  padding: 4rem 3rem !important;
   width: 100% !important;
 }
 
@@ -9,9 +9,6 @@
   padding: 2rem;
 }
 
-.about-intro {
-  padding: 2rem 0 !important;
-}
 .about-intro h2 {
   margin: 0 !important;
 }
