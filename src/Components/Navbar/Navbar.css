@@ -5,6 +5,11 @@
 
 .navbar-container ul li a {
   color: rgba(255, 255, 255, 0.87) !important;
+  box-shadow: inset 0 -1px 0 transparent;
+  transition: box-shadow 0.3s ease-in-out;
+}
+.navbar-container ul li a:hover {
+  box-shadow: inset 0 -1px 0 #fff;
 }
 
 .navbar-toggler,
@@ -13,7 +18,6 @@
   border: none !important;
   font-size: 25px !important;
 }
-
 
 .nav-github:hover {
   transform: scale(1.1) !important;

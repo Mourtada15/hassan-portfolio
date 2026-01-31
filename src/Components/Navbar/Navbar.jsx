@@ -42,7 +42,7 @@ const Navbar = () => {
           className={`collapse navbar-collapse navbar-container mt-4 mt-lg-0 ${expanded ? "show" : ""}`}
           id="navbarSupportedContent"
         >
-          <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+          <ul className="navbar-nav me-auto mb-2 mb-lg-0 align-items-start">
             <li className="nav-item">
               <a className="nav-link" href="/" onClick={closeNavbar}>
                 Home
