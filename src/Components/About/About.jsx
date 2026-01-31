@@ -32,7 +32,7 @@ const About = () => {
           </div>
         </div>
         <div className="about-icon col-4">
-          <img src={Icon} alt="" />
+          <img src={Icon} alt="about avatar" />
         </div>
       </div>
     </section>
