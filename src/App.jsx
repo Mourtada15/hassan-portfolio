@@ -2,6 +2,7 @@ import { Route, Routes, useLocation } from "react-router-dom";
 import "./App.css";
 import Home from "./Pages/Home/Home";
 import { useEffect } from "react";
+import ScrollToTopButton from "./Components/ScrollToTopButton/ScrollToTopButton";
 
 const ScrollToHashElement = () => {
   const { hash } = useLocation();
@@ -11,7 +12,7 @@ const ScrollToHashElement = () => {
       const scrollToElement = () => {
         const element = document.querySelector(hash);
         if (element) {
-          element.scrollIntoView({ behavior: "smooth", block: "center" });
+          element.scrollIntoView({ behavior: "smooth", block: "start" });
         } else {
           setTimeout(scrollToElement, 300);
         }
@@ -42,6 +43,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
         </Routes>
+        <ScrollToTopButton />
       </main>
     </>
   );
