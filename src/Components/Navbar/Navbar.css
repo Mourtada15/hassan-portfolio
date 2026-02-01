@@ -25,6 +25,41 @@
   /* color: hsl(0, 0%, 30%); */
 }
 
+.nav-menu-button span {
+  display: inline-flex;
+  transition: transform 0.3s ease;
+}
+
+.nav-menu-button.is-open span {
+  transform: rotate(90deg);
+}
+
+/* MOBILE ONLY animation */
+@media (max-width: 991px) {
+  .navbar-collapse {
+    display: block !important;
+    overflow: hidden;
+    transition:
+      max-height 0.35s ease,
+      opacity 0.25s ease,
+      margin-top 0.25s ease;
+  }
+
+  .navbar-closed {
+    max-height: 0;
+    opacity: 0;
+    margin-top: 0;
+    pointer-events: none;
+  }
+
+  .navbar-open {
+    max-height: 300px; /* large enough for content */
+    opacity: 1;
+    margin-top: 1rem;
+    pointer-events: auto;
+  }
+}
+
 @media (max-width: 768px) {
   .navbar-wrapper {
     padding: 1rem !important;

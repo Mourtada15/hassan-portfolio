@@ -19,12 +19,11 @@ const Navbar = () => {
     <nav className="navbar navbar-expand-lg navbar-wrapper">
       <div className="container-fluid">
         <button
-          className="navbar-toggler nav-menu-button p-0"
+          className={`navbar-toggler nav-menu-button p-0 ${
+            expanded ? "is-open" : ""
+          }`}
           type="button"
-          // data-bs-toggle="collapse"
-          // data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="expanded"
+          aria-expanded={expanded}
           aria-label="Toggle navigation"
           onClick={toggleNavbar}
         >
@@ -39,8 +38,9 @@ const Navbar = () => {
           )}
         </button>
         <div
-          className={`collapse navbar-collapse navbar-container mt-4 mt-lg-0 ${expanded ? "show" : ""}`}
-          id="navbarSupportedContent"
+          className={`navbar-collapse navbar-container  ${
+            expanded ? "navbar-open" : "navbar-closed"
+          }`}
         >
           <ul className="navbar-nav me-auto mb-2 mb-lg-0 align-items-start">
             <li className="nav-item">
@@ -64,17 +64,16 @@ const Navbar = () => {
               </a>
             </li>
           </ul>
-          
-              <a
-                className="socials-icons nav-github"
-                href="https://github.com/Mourtada15"
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={closeNavbar}
-              >
-                <IoLogoGithub />
-              </a>
-         
+
+          <a
+            className="socials-icons nav-github"
+            href="https://github.com/Mourtada15"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={closeNavbar}
+          >
+            <IoLogoGithub />
+          </a>
         </div>
       </div>
     </nav>
