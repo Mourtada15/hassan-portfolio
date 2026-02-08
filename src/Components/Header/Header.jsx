@@ -1,5 +1,6 @@
 import "./Header.css";
 import ProfilePic from "../../assets/profile01.png";
+import ContactInfo from "../ContactInfo/ContactInfo";
 
 const Header = () => {
   return (
@@ -20,13 +21,18 @@ const Header = () => {
           architecture, user-centric design, and turning complex ideas into
           reliable digital products.
         </p>
-        <a
-          href="/Hassan Mourtada - CV.pdf"
-          download="Hassan Mourtada - CV.pdf"
-          className="btn action-btn mt-4"
-        >
-          Download my resume
-        </a>
+        <div className="d-flex align-items-end justify-content-between justify-content-sm-start mt-4">
+          <a
+            href="/Hassan Mourtada - CV.pdf"
+            download="Hassan Mourtada - CV.pdf"
+            className="btn action-btn"
+          >
+            Download my resume
+          </a>
+          <div className="d-flex align-items-end ps-sm-5" >
+            <ContactInfo />
+          </div>
+        </div>
       </div>
     </header>
   );

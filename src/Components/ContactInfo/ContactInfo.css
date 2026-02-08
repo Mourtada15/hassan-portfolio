@@ -1,0 +1,53 @@
+.action-btn-two {
+  text-decoration: none;
+  color: #55c2a0 !important;
+  font-weight: 500;
+  background-color: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: inset 0 -1px 0 transparent;
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+.action-btn-two:hover {
+  box-shadow: inset 0 -1px 0;
+}
+
+.contactinfo-modal .modal-content {
+  background-color: #242424;
+  color: rgba(255, 255, 255, 0.87);
+  border-radius: 40px;
+  padding: 1rem;
+}
+
+.contactinfo-wrapper a {
+  text-decoration: none;
+  color: #55c2a0;
+  box-shadow: inset 0 -1px 0 transparent;
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+.contactinfo-wrapper a:hover {
+  box-shadow: inset 0 -1px 0;
+}
+
+.contactinfo-wrapper .btn-close {
+  filter: invert(1);
+  opacity: 1;
+  transition: all 0.2s ease-in-out !important;
+}
+.contactinfo-wrapper .btn-close:hover {
+  opacity: 0.7;
+}
+.contactinfo-wrapper .btn-close:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.contactinfo-title {
+  font-size: 24px !important;
+}
+
+.CloseButtonVariant {
+  color: white !important;
+}

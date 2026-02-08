@@ -5,7 +5,7 @@ const About = () => {
   return (
     <section id="about" className="about-wrapper container-lg">
       <div className="row g-0 align-items-center justify-content-between flex-column flex-lg-row">
-        <div className="about-intro col-8 d-flex text-center text-sm-start justify-content-center flex-column gap-3">
+        <div className="about-intro col-8 d-flex justify-content-center flex-column gap-3">
           <div>
             <h2>About me</h2>
             <hr style={{ color: "#ff715a" }} />
