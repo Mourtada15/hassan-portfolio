@@ -26,7 +26,10 @@ function ContactInfo() {
           <Modal.Body className="d-flex flex-column gap-4">
             <div>
               <h5>LinkedIn</h5>
-              <a href="https://www.linkedin.com/in/hassan-mourtada-511072161/">
+              <a
+                href="https://www.linkedin.com/in/hassan-mourtada-511072161/"
+                target="_blank"
+              >
                 linkedin.com/in/hassan-mourtada-511072161
               </a>
             </div>
