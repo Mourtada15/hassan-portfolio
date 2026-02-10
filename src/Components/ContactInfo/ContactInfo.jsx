@@ -20,7 +20,7 @@ function ContactInfo() {
         <div className="contactinfo-wrapper">
           <Modal.Header closeButton>
             <Modal.Title className="contactinfo-title">
-              Contact Info
+              Get in touch
             </Modal.Title>
           </Modal.Header>
           <Modal.Body className="d-flex flex-column gap-4">

@@ -21,7 +21,7 @@ const Header = () => {
           architecture, user-centric design, and turning complex ideas into
           reliable digital products.
         </p>
-        <div className="d-flex align-items-end justify-content-between justify-content-sm-start mt-4">
+        <div className="d-flex align-items-center justify-content-between justify-content-sm-start mt-4">
           <a
             href="/Hassan Mourtada - CV.pdf"
             download="Hassan Mourtada - CV.pdf"
@@ -29,7 +29,7 @@ const Header = () => {
           >
             Download my resume
           </a>
-          <div className="d-flex align-items-end ps-sm-5" >
+          <div className="ps-sm-5">
             <ContactInfo />
           </div>
         </div>
