@@ -12,8 +12,8 @@ const Header = () => {
         <img src={ProfilePic} alt="profile picture" />
       </div>
       <div>
-        <p className="m-0">Hi. I'm</p>
-        <h1>Hassan Mourtada,</h1>
+        <p className="m-0">Hi, I'm</p>
+        <h1>Hassan Mourtada</h1>
         <p>
           A <span style={{ color: "#55c2a0" }}>Full stack Developer</span>{" "}
           specializing in building modern, scalable, and high-performance web
