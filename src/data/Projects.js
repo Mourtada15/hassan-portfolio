@@ -1,6 +1,6 @@
-import PV01 from "../assets/revent.png";
-import PV02 from "../assets/unilink.png";
-import PV03 from "../assets/beta.png";
+import PV01 from "../assets/revent.jpg";
+import PV02 from "../assets/unilink.jpg";
+import PV03 from "../assets/beta.jpg";
 
 export const projects = [
   {

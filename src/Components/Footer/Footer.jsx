@@ -22,6 +22,7 @@ const Footer = () => {
           href="https://github.com/Mourtada15"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="View Hassan Mourtada's GitHub profile"
         >
           <IoLogoGithub />
         </a>
@@ -30,10 +31,15 @@ const Footer = () => {
           href="https://www.linkedin.com/in/hassan-mourtada-511072161/"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="View Hassan Mourtada's LinkedIn profile"
         >
           <IoLogoLinkedin />
         </a>
-        <a className="socials-icons" href="mailto:hassan_mourtada@live.com">
+        <a
+          className="socials-icons"
+          href="mailto:hassan_mourtada@live.com"
+          aria-label="Send an email to Hassan Mourtada"
+        >
           <GrMail />
         </a>
       </div>

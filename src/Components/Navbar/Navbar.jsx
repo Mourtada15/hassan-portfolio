@@ -70,6 +70,7 @@ const Navbar = () => {
             href="https://github.com/Mourtada15"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="View Hassan Mourtada's GitHub profile"
             onClick={closeNavbar}
           >
             <IoLogoGithub />

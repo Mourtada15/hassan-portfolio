@@ -15,6 +15,12 @@
   transform: scale(1.1);
 }
 
+.socials-icons:focus-visible {
+  outline: 2px solid #55c2a0;
+  outline-offset: 4px;
+  border-radius: 8px;
+}
+
 @media (max-width: 768px) {
   .footer-wrapper {
     padding: 3rem 1rem;

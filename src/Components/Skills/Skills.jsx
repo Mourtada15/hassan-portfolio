@@ -12,14 +12,23 @@ const skills = [
 
 const Skills = () => {
   return (
-    <section id="skills" className="skills-wrapper">
+    <section
+      id="skills"
+      className="skills-wrapper"
+      aria-labelledby="skills-title"
+    >
+      <h2 id="skills-title" className="visually-hidden">
+        Skills
+      </h2>
       <div className="skills-track">
         {[...Array(2)].map((_, i) => (
-          <div className="skills-set" key={i}>
+          <ul className="skills-set" key={i} aria-hidden={i === 1}>
             {skills.map(skill => (
-              <h4 key={`${i}-${skill}`}>{skill}</h4>
+              <li className="skills-item" key={`${i}-${skill}`}>
+                {skill}
+              </li>
             ))}
-          </div>
+          </ul>
         ))}
       </div>
     </section>

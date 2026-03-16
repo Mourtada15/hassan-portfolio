@@ -65,7 +65,12 @@ const Projects = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img src={project.image} alt={`${project.title} preview`} />
+                <img
+                  src={project.image}
+                  alt={`${project.title} preview`}
+                  loading="lazy"
+                  decoding="async"
+                />
               </a>
             </div>
           </div>

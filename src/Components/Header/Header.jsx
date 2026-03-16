@@ -9,7 +9,12 @@ const Header = () => {
       className="header-wrapper container-lg d-flex flex-column flex-lg-row justify-content-center align-items-center text-start gap-5"
     >
       <div className="profile-container">
-        <img src={ProfilePic} alt="profile picture" />
+        <img
+          src={ProfilePic}
+          alt="Portrait of Hassan Mourtada"
+          decoding="async"
+          fetchPriority="high"
+        />
       </div>
       <div>
         <p className="m-0">Hi, I'm</p>

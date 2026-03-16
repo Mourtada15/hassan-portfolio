@@ -8,17 +8,40 @@ const ScrollToHashElement = () => {
   const { hash } = useLocation();
 
   useEffect(() => {
-    if (hash) {
-      const scrollToElement = () => {
-        const element = document.querySelector(hash);
-        if (element) {
-          element.scrollIntoView({ behavior: "smooth", block: "start" });
-        } else {
-          setTimeout(scrollToElement, 300);
-        }
-      };
-      setTimeout(scrollToElement, 300);
-    }
+    if (!hash) return undefined;
+
+    const prefersReducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)",
+    ).matches;
+    const targetId = decodeURIComponent(hash.slice(1));
+    let timeoutId;
+    let attempts = 0;
+    const maxAttempts = 10;
+
+    const scrollToElement = () => {
+      const element = document.getElementById(targetId);
+
+      if (element) {
+        element.scrollIntoView({
+          behavior: prefersReducedMotion ? "auto" : "smooth",
+          block: "start",
+        });
+        return;
+      }
+
+      if (attempts >= maxAttempts) return;
+
+      attempts += 1;
+      timeoutId = window.setTimeout(scrollToElement, 150);
+    };
+
+    scrollToElement();
+
+    return () => {
+      if (timeoutId) {
+        window.clearTimeout(timeoutId);
+      }
+    };
   }, [hash]);
 
   return null;

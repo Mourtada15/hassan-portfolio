@@ -29,6 +29,7 @@ function ContactInfo() {
               <a
                 href="https://www.linkedin.com/in/hassan-mourtada-511072161/"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 linkedin.com/in/hassan-mourtada-511072161
               </a>

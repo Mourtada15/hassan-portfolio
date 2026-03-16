@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { AiOutlineArrowUp } from "react-icons/ai";
-import { FaArrowUp } from "react-icons/fa";
 
 import "./ScrollToTopButton.css";
 
@@ -18,16 +17,25 @@ const ScrollToTopButton = () => {
   }, []);
 
   const scrollToTop = () => {
+    const prefersReducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)",
+    ).matches;
+
     window.scrollTo({
       top: 0,
-      behavior: "smooth",
+      behavior: prefersReducedMotion ? "auto" : "smooth",
     });
   };
 
   return (
     <>
       {visible && (
-        <button className="scroll-to-top" onClick={scrollToTop}>
+        <button
+          type="button"
+          className="scroll-to-top"
+          onClick={scrollToTop}
+          aria-label="Scroll back to the top of the page"
+        >
           <AiOutlineArrowUp size={24} />
         </button>
       )}

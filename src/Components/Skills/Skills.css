@@ -23,10 +23,13 @@
 .skills-set {
   display: inline-flex;
   flex-shrink: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 /* Skill item */
-.skills-wrapper h4 {
+.skills-item {
   font-size: 1rem;
   font-weight: 400;
   margin: 0;
@@ -46,6 +49,13 @@
   }
   to {
     transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skills-track {
+    animation: none;
+    transform: none;
   }
 }
 
