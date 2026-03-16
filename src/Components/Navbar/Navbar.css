@@ -62,7 +62,7 @@
   }
 
   .navbar-open {
-    max-height: 300px; /* large enough for content */
+    max-height: 360px; /* large enough for content */
     opacity: 1;
     margin-top: 1rem;
     pointer-events: auto;

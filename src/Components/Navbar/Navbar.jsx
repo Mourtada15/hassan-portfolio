@@ -63,6 +63,15 @@ const Navbar = () => {
                 Projects
               </a>
             </li>
+            <li className="nav-item">
+              <a
+                className="nav-link"
+                href="#personal-projects"
+                onClick={closeNavbar}
+              >
+                Personal Projects
+              </a>
+            </li>
           </ul>
 
           <a

@@ -1,0 +1,329 @@
+.personal-projects-wrapper {
+  padding: 0 3rem 4rem !important;
+}
+
+.personal-projects-wrapper h2 {
+  margin: 0;
+}
+
+.personal-project-showcase {
+  --accent-primary: #55c2a0;
+  --surface-border: rgba(255, 255, 255, 0.08);
+  --surface-strong: rgba(255, 255, 255, 0.05);
+  --surface-soft: rgba(255, 255, 255, 0.03);
+  --text-muted: rgba(255, 255, 255, 0.78);
+  position: relative;
+  display: grid;
+  gap: 1.2rem;
+  padding: 1.35rem;
+  border: 1px solid var(--surface-border);
+  border-radius: 34px;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at top right, rgba(85, 194, 160, 0.12), transparent 30%),
+    radial-gradient(circle at bottom left, rgba(255, 113, 90, 0.08), transparent 34%),
+    linear-gradient(180deg, rgba(14, 14, 14, 0.98), rgba(8, 8, 8, 0.99));
+  box-shadow:
+    0 18px 40px rgba(0, 0, 0, 0.22),
+    inset 0 1px 0 rgba(255, 255, 255, 0.025);
+}
+
+.personal-project-hero,
+.personal-project-grid {
+  position: relative;
+  z-index: 1;
+}
+
+.personal-project-copy,
+.personal-project-callout,
+.personal-project-panel,
+.stack-badges {
+  min-width: 0;
+}
+
+.personal-project-hero {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(300px, 0.9fr);
+  gap: 1.1rem;
+  padding: 1.4rem;
+  border: 1px solid var(--surface-border);
+  border-radius: 28px;
+  background:
+    linear-gradient(180deg, var(--surface-strong), rgba(255, 255, 255, 0.018)),
+    rgba(10, 10, 10, 0.88);
+  overflow: hidden;
+}
+
+.personal-project-number {
+  position: absolute;
+  right: 1rem;
+  top: 0.35rem;
+  font-size: clamp(3.8rem, 11vw, 7rem);
+  font-weight: 700;
+  line-height: 0.9;
+  color: rgba(255, 255, 255, 0.035);
+  pointer-events: none;
+  user-select: none;
+}
+
+.personal-project-copy {
+  position: relative;
+  display: grid;
+  gap: 1rem;
+  align-content: start;
+}
+
+.personal-project-type {
+  margin: 0;
+  color: var(--accent-primary);
+  font-size: 0.88rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.personal-project-copy h3 {
+  margin: 0;
+  max-width: 18ch;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1;
+}
+
+.personal-project-summary {
+  max-width: 60ch;
+  color: var(--text-muted);
+  line-height: 1.75;
+}
+
+.personal-project-callout {
+  position: relative;
+  display: grid;
+  gap: 0.9rem;
+  align-content: start;
+  padding: 1.15rem;
+  border: 1px solid var(--surface-border);
+  border-radius: 22px;
+  background:
+    linear-gradient(180deg, var(--surface-soft), rgba(255, 255, 255, 0.015)),
+    linear-gradient(
+      135deg,
+      rgba(85, 194, 160, 0.05),
+      rgba(255, 113, 90, 0.04)
+    );
+}
+
+.personal-project-callout-label {
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 0.8rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.personal-project-overview {
+  color: #fff;
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+.personal-project-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+  margin-top: 0.35rem;
+}
+
+.personal-project-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  padding: 0.75rem 1.2rem;
+  border: 1px solid #ff715a;
+  border-radius: 999px;
+  background: #ff715a;
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.personal-project-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.25);
+}
+
+.personal-project-link:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 4px;
+}
+
+.personal-project-link-secondary {
+  background: transparent;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.personal-project-link-secondary:hover {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.personal-project-grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 1.1rem;
+}
+
+.personal-project-panel {
+  min-height: 0;
+  padding: 1.15rem;
+  border: 1px solid var(--surface-border);
+  border-radius: 22px;
+  background:
+    linear-gradient(180deg, var(--surface-soft), rgba(255, 255, 255, 0.018)),
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.02),
+      rgba(255, 255, 255, 0)
+    );
+}
+
+.personal-project-panel-header {
+  display: grid;
+  gap: 0.55rem;
+  margin-bottom: 0.85rem;
+}
+
+.personal-project-panel-index {
+  width: fit-content;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--accent-primary);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.personal-project-panel h4 {
+  margin: 0;
+}
+
+.personal-project-panel ul {
+  padding-left: 1.15rem;
+  color: var(--text-muted);
+  line-height: 1.65;
+}
+
+.personal-project-panel li + li {
+  margin-top: 0.65rem;
+}
+
+.panel-xl {
+  grid-column: span 6;
+}
+
+.panel-sm {
+  grid-column: span 3;
+}
+
+.panel-md {
+  grid-column: span 4;
+}
+
+.personal-project-stack-panel {
+  grid-column: span 4;
+}
+
+.personal-project-stack-panel .stack-badges .badge {
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  font-weight: 400;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 1100px) {
+  .personal-project-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .personal-project-number {
+    right: 1rem;
+    top: 0.55rem;
+  }
+
+  .personal-project-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .panel-xl,
+  .panel-sm,
+  .panel-md,
+  .personal-project-stack-panel {
+    grid-column: span 1;
+  }
+}
+
+@media (max-width: 900px) {
+  .personal-project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .personal-project-panel,
+  .personal-project-stack-panel,
+  .panel-xl,
+  .panel-sm,
+  .panel-md {
+    grid-column: span 1;
+    min-height: 0;
+  }
+
+  .personal-project-copy h3 {
+    max-width: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .personal-projects-wrapper {
+    padding: 0 1rem 2rem !important;
+  }
+
+  .personal-project-showcase {
+    padding: 1rem;
+    border-radius: 26px;
+  }
+
+  .personal-project-hero,
+  .personal-project-panel {
+    padding: 1.1rem;
+    border-radius: 20px;
+  }
+
+  .personal-project-copy h3 {
+    max-width: none;
+  }
+
+  .personal-project-type,
+  .personal-project-callout-label {
+    letter-spacing: 0.1em;
+  }
+
+  .personal-project-actions {
+    flex-direction: column;
+  }
+
+  .personal-project-link,
+  .personal-project-link-secondary {
+    width: 100%;
+  }
+
+  .personal-project-number {
+    right: 0.8rem;
+    top: 0.75rem;
+    font-size: clamp(3rem, 16vw, 4.6rem);
+  }
+}

@@ -5,6 +5,7 @@ import About from "../../Components/About/About";
 import Footer from "../../Components/Footer/Footer";
 import Projects from "../../Components/Projects/Projects";
 import Navbar from "../../Components/Navbar/Navbar";
+import PersonalProjects from "../../Components/PersonalProjects/PersonalProjects";
 
 
 const Home = () => {
@@ -15,6 +16,7 @@ const Home = () => {
     <Skills />
     <About />
     <Projects />
+    <PersonalProjects />
     <Footer />
     </>
   );
