@@ -20,11 +20,12 @@ const Header = () => {
         <p className="m-0">Hi, I'm</p>
         <h1>Hassan Mourtada</h1>
         <p>
-          A <span style={{ color: "#55c2a0" }}>Full stack Developer</span>{" "}
-          specializing in building modern, scalable, and high-performance web
-          applications using the MERN stack. <br />I focus on clean
-          architecture, user-centric design, and turning complex ideas into
-          reliable digital products.
+          A <span style={{ color: "#55c2a0" }}>Full-Stack Developer</span> with
+          a systems mindset, specializing in building modern, scalable, and
+          high-performance web applications using the MERN stack. <br />I focus
+          on clean architecture, reliable delivery, and using AI-assisted
+          workflows to speed up development, improve debugging, and turn complex
+          ideas into maintainable digital products.
         </p>
         <div className="d-flex align-items-center justify-content-between justify-content-sm-start mt-4">
           <a

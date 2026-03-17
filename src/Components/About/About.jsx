@@ -12,22 +12,23 @@ const About = () => {
           </div>
           <div>
             <p>
-              I’m a passionate Full-Stack Developer who enjoys building modern,
-              user-focused applications. I work mainly with JavaScript, React,
-              and Node.js, and I’m comfortable handling both frontend and
-              backend development.
+              I’m a Full-Stack Developer who enjoys building modern,
+              user-focused web applications with JavaScript, React, Node.js,
+              and the MERN stack. I’m comfortable working across both frontend
+              and backend, with a strong focus on scalability, maintainability,
+              and clean architecture.
             </p>
             <p>
-              What drives me most is creating clean, scalable solutions that are
-              easy to use and easy to maintain. I enjoy learning new
-              technologies, refining my problem-solving skills, and
-              collaborating with others to turn ideas into real, working
-              products.
+              What drives me most is solving problems in a structured way and
+              turning ideas into reliable systems that are easy to use, extend,
+              and maintain. As I’ve grown as a developer, my mindset has
+              expanded from simply building features to thinking more deeply
+              about architecture, workflows, and long-term product quality.
             </p>
             <p>
-              Beyond traditional development, I’m curious about AI and enjoy
-              experimenting with AI tools to improve development workflows and
-              enhance web experiences.
+              I also work with AI tools and APIs to improve development
+              workflows, speed up repetitive tasks, support debugging, and
+              build smarter product experiences when AI adds real value.
             </p>
           </div>
         </div>

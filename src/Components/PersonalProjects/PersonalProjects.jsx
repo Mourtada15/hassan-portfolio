@@ -16,14 +16,30 @@ const PersonalProjects = () => {
       className="personal-projects-wrapper container-lg d-flex flex-column gap-5"
       aria-labelledby="personal-projects-title"
     >
-      <div>
+      <div className="personal-projects-heading">
+        <p className="personal-projects-kicker mb-2">Build Log</p>
         <h2 id="personal-projects-title">Personal Projects</h2>
-        <hr style={{ color: "#ff715a" }} />
+        <p className="personal-projects-intro mb-0">
+          Independent products built to explore system design, AI workflows,
+          and production-style engineering decisions beyond client constraints.
+        </p>
+        <hr className="personal-projects-rule" />
       </div>
 
       <div className="personal-projects-list d-flex flex-column gap-5">
         {personalProjects.map((project, index) => {
           const projectNumber = String(index + 1).padStart(2, "0");
+          const featureCount = String(project.featureGroups.length).padStart(
+            2,
+            "0",
+          );
+          const stackCount = String(project.stack.length).padStart(2, "0");
+          const projectAccess = project.liveUrl && project.repoUrl
+            ? "Live + Source"
+            : project.liveUrl
+              ? "Live Build"
+              : "Source Available";
+          const sourceMode = project.repoUrl ? "Public" : "Private";
 
           return (
             <article key={project.id} className="personal-project-showcase">
@@ -33,7 +49,13 @@ const PersonalProjects = () => {
                 </span>
 
                 <div className="personal-project-copy">
-                  <p className="personal-project-type">{project.type}</p>
+                  <div className="personal-project-copy-top">
+                    <p className="personal-project-type">{project.type}</p>
+                    <div className="personal-project-inline-metrics">
+                      <span>{featureCount} modules</span>
+                      <span>{stackCount} technologies</span>
+                    </div>
+                  </div>
                   <h3>{project.title}</h3>
                   <p className="personal-project-summary mb-0">
                     {project.description}
@@ -41,12 +63,44 @@ const PersonalProjects = () => {
                 </div>
 
                 <aside className="personal-project-callout">
-                  <p className="personal-project-callout-label mb-0">
-                    Project Lens
-                  </p>
+                  <div className="personal-project-callout-head">
+                    <p className="personal-project-callout-label mb-0">
+                      System Brief
+                    </p>
+                    <span className="personal-project-callout-status">
+                      {projectAccess}
+                    </span>
+                  </div>
                   <p className="personal-project-overview mb-0">
                     {project.overview}
                   </p>
+
+                  <div className="personal-project-metrics">
+                    <div className="personal-project-metric">
+                      <span className="personal-project-metric-value">
+                        {featureCount}
+                      </span>
+                      <span className="personal-project-metric-label">
+                        Modules
+                      </span>
+                    </div>
+                    <div className="personal-project-metric">
+                      <span className="personal-project-metric-value">
+                        {stackCount}
+                      </span>
+                      <span className="personal-project-metric-label">
+                        Technologies
+                      </span>
+                    </div>
+                    <div className="personal-project-metric">
+                      <span className="personal-project-metric-value">
+                        {sourceMode}
+                      </span>
+                      <span className="personal-project-metric-label">
+                        Source Mode
+                      </span>
+                    </div>
+                  </div>
 
                   {(project.liveUrl || project.repoUrl) && (
                     <div className="personal-project-actions">
@@ -58,7 +112,7 @@ const PersonalProjects = () => {
                           className="personal-project-link"
                           aria-label={`View ${project.title} live website`}
                         >
-                          View Live Website
+                          Open Live Build
                         </a>
                       )}
                       {project.repoUrl && (
@@ -69,7 +123,7 @@ const PersonalProjects = () => {
                           className="personal-project-link personal-project-link-secondary"
                           aria-label={`View ${project.title} GitHub repository`}
                         >
-                          View GitHub Repo
+                          Inspect Source
                         </a>
                       )}
                     </div>
@@ -86,12 +140,17 @@ const PersonalProjects = () => {
                     key={group.title}
                   >
                     <div className="personal-project-panel-header">
-                      <span
-                        className="personal-project-panel-index"
-                        aria-hidden="true"
-                      >
-                        {String(groupIndex + 1).padStart(2, "0")}
-                      </span>
+                      <div className="personal-project-panel-topline">
+                        <span
+                          className="personal-project-panel-index"
+                          aria-hidden="true"
+                        >
+                          {String(groupIndex + 1).padStart(2, "0")}
+                        </span>
+                        <span className="personal-project-panel-tag">
+                          Module
+                        </span>
+                      </div>
                       <h4>{group.title}</h4>
                     </div>
                     <ul className="mb-0">
@@ -104,8 +163,10 @@ const PersonalProjects = () => {
 
                 <section className="personal-project-panel personal-project-stack-panel">
                   <div className="personal-project-panel-header">
-                    <span className="personal-project-panel-index">Stack</span>
-                    <h4>Tech Stack</h4>
+                    <div className="personal-project-panel-topline">
+                      <span className="personal-project-panel-tag">Summary</span>
+                    </div>
+                    <h4>Technology Matrix</h4>
                   </div>
                   <div className="stack-badges d-flex flex-wrap gap-2">
                     {project.stack.map((tech) => (

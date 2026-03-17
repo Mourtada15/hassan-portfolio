@@ -6,26 +6,95 @@
   margin: 0;
 }
 
+.personal-projects-heading {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.personal-projects-kicker {
+  width: fit-content;
+  padding: 0.35rem 0.8rem;
+  border: 1px solid rgba(142, 240, 208, 0.18);
+  border-radius: 999px;
+  background: rgba(142, 240, 208, 0.08);
+  color: #8ef0d0;
+  font-family:
+    "IBM Plex Mono",
+    "SFMono-Regular",
+    Consolas,
+    "Liberation Mono",
+    monospace;
+  font-size: 0.76rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.personal-projects-intro {
+  color: rgba(255, 255, 255, 0.74);
+  line-height: 1.75;
+  font-size: 1.02rem;
+}
+
+.personal-projects-rule {
+  width: 100%;
+  height: 1px;
+  margin: 0.35rem 0 0;
+  border: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(142, 240, 208, 0.95),
+    rgba(123, 143, 255, 0.68),
+    transparent 85%
+  );
+}
+
 .personal-project-showcase {
-  --accent-primary: #55c2a0;
-  --surface-border: rgba(255, 255, 255, 0.08);
-  --surface-strong: rgba(255, 255, 255, 0.05);
+  --accent-primary: #8ef0d0;
+  --accent-secondary: #7b8fff;
+  --surface-border: rgba(142, 240, 208, 0.12);
+  --surface-border-strong: rgba(142, 240, 208, 0.22);
+  --surface-strong: rgba(10, 20, 28, 0.92);
   --surface-soft: rgba(255, 255, 255, 0.03);
-  --text-muted: rgba(255, 255, 255, 0.78);
+  --text-muted: rgba(229, 242, 239, 0.78);
   position: relative;
   display: grid;
-  gap: 1.2rem;
-  padding: 1.35rem;
+  gap: 1.15rem;
+  padding: 1.45rem;
   border: 1px solid var(--surface-border);
   border-radius: 34px;
   overflow: hidden;
   background:
-    radial-gradient(circle at top right, rgba(85, 194, 160, 0.12), transparent 30%),
-    radial-gradient(circle at bottom left, rgba(255, 113, 90, 0.08), transparent 34%),
-    linear-gradient(180deg, rgba(14, 14, 14, 0.98), rgba(8, 8, 8, 0.99));
+    radial-gradient(circle at top right, rgba(123, 143, 255, 0.14), transparent 32%),
+    radial-gradient(
+      circle at bottom left,
+      rgba(142, 240, 208, 0.08),
+      transparent 28%
+    ),
+    linear-gradient(160deg, rgba(7, 13, 22, 0.98), rgba(5, 9, 17, 0.99));
   box-shadow:
-    0 18px 40px rgba(0, 0, 0, 0.22),
-    inset 0 1px 0 rgba(255, 255, 255, 0.025);
+    0 26px 55px rgba(0, 0, 0, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+.personal-project-showcase::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(142, 240, 208, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(142, 240, 208, 0.05) 1px, transparent 1px);
+  background-size: 28px 28px;
+  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.65), transparent 92%);
+  pointer-events: none;
+}
+
+.personal-project-showcase::after {
+  content: "";
+  position: absolute;
+  inset: 16px;
+  border: 1px solid rgba(123, 143, 255, 0.1);
+  border-radius: 26px;
+  pointer-events: none;
 }
 
 .personal-project-hero,
@@ -44,25 +113,32 @@
 .personal-project-hero {
   position: relative;
   display: grid;
-  grid-template-columns: minmax(0, 1.5fr) minmax(300px, 0.9fr);
+  grid-template-columns: minmax(0, 1.45fr) minmax(320px, 0.95fr);
   gap: 1.1rem;
   padding: 1.4rem;
-  border: 1px solid var(--surface-border);
+  border: 1px solid rgba(123, 143, 255, 0.15);
   border-radius: 28px;
   background:
-    linear-gradient(180deg, var(--surface-strong), rgba(255, 255, 255, 0.018)),
-    rgba(10, 10, 10, 0.88);
+    linear-gradient(180deg, rgba(10, 20, 28, 0.9), rgba(6, 12, 20, 0.96)),
+    linear-gradient(135deg, rgba(123, 143, 255, 0.1), rgba(142, 240, 208, 0.05));
   overflow: hidden;
 }
 
 .personal-project-number {
   position: absolute;
   right: 1rem;
-  top: 0.35rem;
-  font-size: clamp(3.8rem, 11vw, 7rem);
+  top: 0.45rem;
+  color: rgba(123, 143, 255, 0.11);
+  font-family:
+    "IBM Plex Mono",
+    "SFMono-Regular",
+    Consolas,
+    "Liberation Mono",
+    monospace;
+  font-size: clamp(3.6rem, 10vw, 6.8rem);
   font-weight: 700;
   line-height: 0.9;
-  color: rgba(255, 255, 255, 0.035);
+  letter-spacing: -0.05em;
   pointer-events: none;
   user-select: none;
 }
@@ -74,62 +150,174 @@
   align-content: start;
 }
 
+.personal-project-copy-top {
+  display: grid;
+  gap: 0.8rem;
+}
+
 .personal-project-type {
+  width: fit-content;
   margin: 0;
+  padding: 0.38rem 0.82rem;
+  border: 1px solid rgba(142, 240, 208, 0.16);
+  border-radius: 999px;
+  background: rgba(142, 240, 208, 0.08);
   color: var(--accent-primary);
-  font-size: 0.88rem;
+  font-family:
+    "IBM Plex Mono",
+    "SFMono-Regular",
+    Consolas,
+    "Liberation Mono",
+    monospace;
+  font-size: 0.78rem;
   letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.personal-project-inline-metrics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.personal-project-inline-metrics span {
+  padding: 0.38rem 0.7rem;
+  border: 1px solid rgba(123, 143, 255, 0.16);
+  border-radius: 999px;
+  background: rgba(123, 143, 255, 0.08);
+  color: rgba(255, 255, 255, 0.78);
+  font-family:
+    "IBM Plex Mono",
+    "SFMono-Regular",
+    Consolas,
+    "Liberation Mono",
+    monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
 .personal-project-copy h3 {
   margin: 0;
-  max-width: 18ch;
-  font-size: clamp(2rem, 4vw, 3rem);
-  line-height: 1;
+  max-width: 16ch;
+  font-size: clamp(2.1rem, 4vw, 3.2rem);
+  line-height: 0.95;
 }
 
 .personal-project-summary {
-  max-width: 60ch;
+  max-width: 62ch;
   color: var(--text-muted);
   line-height: 1.75;
+  font-size: 1.02rem;
 }
 
 .personal-project-callout {
   position: relative;
   display: grid;
-  gap: 0.9rem;
+  gap: 1rem;
   align-content: start;
-  padding: 1.15rem;
-  border: 1px solid var(--surface-border);
+  padding: 1.2rem;
+  border: 1px solid var(--surface-border-strong);
   border-radius: 22px;
   background:
-    linear-gradient(180deg, var(--surface-soft), rgba(255, 255, 255, 0.015)),
-    linear-gradient(
-      135deg,
-      rgba(85, 194, 160, 0.05),
-      rgba(255, 113, 90, 0.04)
-    );
+    linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.015)),
+    linear-gradient(145deg, rgba(8, 18, 24, 0.9), rgba(9, 13, 24, 0.92));
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03);
+}
+
+.personal-project-callout-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.75rem;
 }
 
 .personal-project-callout-label {
-  color: rgba(255, 255, 255, 0.55);
-  font-size: 0.8rem;
-  letter-spacing: 0.14em;
+  color: rgba(255, 255, 255, 0.54);
+  font-family:
+    "IBM Plex Mono",
+    "SFMono-Regular",
+    Consolas,
+    "Liberation Mono",
+    monospace;
+  font-size: 0.78rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.personal-project-callout-status {
+  padding: 0.28rem 0.62rem;
+  border: 1px solid rgba(142, 240, 208, 0.2);
+  border-radius: 999px;
+  background: rgba(142, 240, 208, 0.08);
+  color: var(--accent-primary);
+  font-family:
+    "IBM Plex Mono",
+    "SFMono-Regular",
+    Consolas,
+    "Liberation Mono",
+    monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
 }
 
 .personal-project-overview {
   color: #fff;
   font-size: 1rem;
-  line-height: 1.65;
+  line-height: 1.7;
+}
+
+.personal-project-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.personal-project-metric {
+  display: grid;
+  gap: 0.35rem;
+  min-width: 0;
+  padding: 0.85rem;
+  border: 1px solid rgba(123, 143, 255, 0.14);
+  border-radius: 18px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.035), rgba(255, 255, 255, 0.015)),
+    rgba(7, 13, 20, 0.75);
+}
+
+.personal-project-metric-value {
+  color: #fff;
+  font-family:
+    "IBM Plex Mono",
+    "SFMono-Regular",
+    Consolas,
+    "Liberation Mono",
+    monospace;
+  font-size: 1.18rem;
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+
+.personal-project-metric-label {
+  color: rgba(255, 255, 255, 0.56);
+  font-family:
+    "IBM Plex Mono",
+    "SFMono-Regular",
+    Consolas,
+    "Liberation Mono",
+    monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
 }
 
 .personal-project-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 0.85rem;
-  margin-top: 0.35rem;
+  margin-top: 0.15rem;
 }
 
 .personal-project-link {
@@ -137,23 +325,43 @@
   align-items: center;
   justify-content: center;
   width: fit-content;
-  padding: 0.75rem 1.2rem;
-  border: 1px solid #ff715a;
-  border-radius: 999px;
-  background: #ff715a;
+  padding: 0.85rem 1.1rem;
+  border: 1px solid rgba(142, 240, 208, 0.22);
+  border-radius: 16px;
+  background: linear-gradient(
+    135deg,
+    rgba(142, 240, 208, 0.18),
+    rgba(123, 143, 255, 0.18)
+  );
   color: #fff;
+  font-family:
+    "IBM Plex Mono",
+    "SFMono-Regular",
+    Consolas,
+    "Liberation Mono",
+    monospace;
+  font-size: 0.84rem;
   font-weight: 600;
+  letter-spacing: 0.02em;
   text-decoration: none;
   transition:
     transform 0.2s ease,
     box-shadow 0.2s ease,
     background-color 0.2s ease,
+    border-color 0.2s ease,
     color 0.2s ease;
+}
+
+.personal-project-link::before {
+  content: ">";
+  margin-right: 0.55rem;
+  color: var(--accent-primary);
 }
 
 .personal-project-link:hover {
   transform: translateY(-2px);
-  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.25);
+  border-color: rgba(142, 240, 208, 0.34);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.24);
 }
 
 .personal-project-link:focus-visible {
@@ -162,8 +370,13 @@
 }
 
 .personal-project-link-secondary {
-  background: transparent;
+  background: rgba(255, 255, 255, 0.025);
   color: rgba(255, 255, 255, 0.92);
+}
+
+.personal-project-link-secondary::before {
+  content: "/";
+  color: var(--accent-secondary);
 }
 
 .personal-project-link-secondary:hover {
@@ -177,45 +390,88 @@
 }
 
 .personal-project-panel {
+  position: relative;
   min-height: 0;
   padding: 1.15rem;
-  border: 1px solid var(--surface-border);
+  border: 1px solid rgba(123, 143, 255, 0.12);
   border-radius: 22px;
   background:
-    linear-gradient(180deg, var(--surface-soft), rgba(255, 255, 255, 0.018)),
-    linear-gradient(
-      135deg,
-      rgba(255, 255, 255, 0.02),
-      rgba(255, 255, 255, 0)
-    );
+    linear-gradient(180deg, rgba(255, 255, 255, 0.035), rgba(255, 255, 255, 0.015)),
+    rgba(8, 14, 24, 0.82);
+}
+
+.personal-project-panel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(142, 240, 208, 0.045),
+    transparent 55%
+  );
+  pointer-events: none;
 }
 
 .personal-project-panel-header {
+  position: relative;
   display: grid;
+  gap: 0.65rem;
+  margin-bottom: 0.95rem;
+}
+
+.personal-project-panel-topline {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   gap: 0.55rem;
-  margin-bottom: 0.85rem;
 }
 
 .personal-project-panel-index {
   width: fit-content;
-  padding: 0.2rem 0.55rem;
+  padding: 0.25rem 0.6rem;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.06);
+  background: rgba(142, 240, 208, 0.1);
   color: var(--accent-primary);
-  font-size: 0.75rem;
+  font-family:
+    "IBM Plex Mono",
+    "SFMono-Regular",
+    Consolas,
+    "Liberation Mono",
+    monospace;
+  font-size: 0.72rem;
   font-weight: 700;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.personal-project-panel-tag {
+  color: rgba(255, 255, 255, 0.56);
+  font-family:
+    "IBM Plex Mono",
+    "SFMono-Regular",
+    Consolas,
+    "Liberation Mono",
+    monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
 }
 
 .personal-project-panel h4 {
   margin: 0;
+  max-width: 20ch;
 }
 
 .personal-project-panel ul {
-  padding-left: 1.15rem;
+  position: relative;
+  z-index: 1;
+  padding-left: 1.1rem;
   color: var(--text-muted);
   line-height: 1.65;
+}
+
+.personal-project-panel li::marker {
+  color: var(--accent-secondary);
 }
 
 .personal-project-panel li + li {
@@ -235,36 +491,59 @@
 }
 
 .personal-project-stack-panel {
-  grid-column: span 4;
+  grid-column: 1 / -1;
+}
+
+.personal-project-stack-panel .stack-badges {
+  position: relative;
+  z-index: 1;
 }
 
 .personal-project-stack-panel .stack-badges .badge {
-  background-color: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  font-weight: 400;
+  padding: 0.55rem 0.75rem;
+  border: 1px solid rgba(142, 240, 208, 0.14);
+  border-radius: 12px;
+  background: rgba(8, 14, 24, 0.82);
+  color: rgba(255, 255, 255, 0.88);
+  font-family:
+    "IBM Plex Mono",
+    "SFMono-Regular",
+    Consolas,
+    "Liberation Mono",
+    monospace;
+  font-weight: 500;
   white-space: normal;
   overflow-wrap: anywhere;
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1180px) {
   .personal-project-hero {
     grid-template-columns: 1fr;
   }
 
   .personal-project-number {
     right: 1rem;
-    top: 0.55rem;
+    top: 0.6rem;
   }
 
+  .personal-project-metrics {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 1100px) {
   .personal-project-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .panel-xl,
   .panel-sm,
-  .panel-md,
-  .personal-project-stack-panel {
+  .panel-md {
     grid-column: span 1;
+  }
+
+  .personal-project-stack-panel {
+    grid-column: 1 / -1;
   }
 }
 
@@ -285,6 +564,10 @@
   .personal-project-copy h3 {
     max-width: none;
   }
+
+  .personal-project-metrics {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 768px) {
@@ -292,14 +575,23 @@
     padding: 0 1rem 2rem !important;
   }
 
+  .personal-projects-intro {
+    font-size: 0.98rem;
+  }
+
   .personal-project-showcase {
     padding: 1rem;
     border-radius: 26px;
   }
 
+  .personal-project-showcase::after {
+    inset: 10px;
+    border-radius: 20px;
+  }
+
   .personal-project-hero,
   .personal-project-panel {
-    padding: 1.1rem;
+    padding: 1.05rem;
     border-radius: 20px;
   }
 
@@ -308,8 +600,14 @@
   }
 
   .personal-project-type,
-  .personal-project-callout-label {
-    letter-spacing: 0.1em;
+  .personal-project-inline-metrics span,
+  .personal-project-callout-label,
+  .personal-project-callout-status,
+  .personal-project-panel-index,
+  .personal-project-panel-tag,
+  .personal-project-metric-label,
+  .personal-project-link {
+    letter-spacing: 0.08em;
   }
 
   .personal-project-actions {
@@ -323,7 +621,7 @@
 
   .personal-project-number {
     right: 0.8rem;
-    top: 0.75rem;
-    font-size: clamp(3rem, 16vw, 4.6rem);
+    top: 0.85rem;
+    font-size: clamp(2.8rem, 16vw, 4.4rem);
   }
 }
