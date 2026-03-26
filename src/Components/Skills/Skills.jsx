@@ -16,6 +16,7 @@ const Skills = () => {
       id="skills"
       className="skills-wrapper"
       aria-labelledby="skills-title"
+      data-analytics-section="skills"
     >
       <h2 id="skills-title" className="visually-hidden">
         Skills

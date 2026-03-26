@@ -1,12 +1,31 @@
 import "./Header.css";
 import ProfilePic from "../../assets/profile01.png";
 import ContactInfo from "../ContactInfo/ContactInfo";
+import {
+  getDestinationType,
+  sanitizeLinkUrl,
+  trackResumeDownload,
+} from "../../lib/analytics";
 
 const Header = () => {
+  const resumeHref = "/Hassan Mourtada - CV.pdf";
+  const resumeFileName = "Hassan Mourtada - CV.pdf";
+
+  const handleResumeClick = () => {
+    trackResumeDownload({
+      cta_location: "hero",
+      file_name: resumeFileName,
+      link_label: "resume_pdf",
+      link_url: sanitizeLinkUrl(resumeHref),
+      destination_type: getDestinationType(resumeHref),
+    });
+  };
+
   return (
     <header
       id="header"
       className="header-wrapper container-lg d-flex flex-column flex-lg-row justify-content-center align-items-center text-start gap-5"
+      data-analytics-section="hero"
     >
       <div className="profile-container">
         <img
@@ -29,14 +48,16 @@ const Header = () => {
         </p>
         <div className="d-flex align-items-center justify-content-between justify-content-sm-start mt-4">
           <a
-            href="/Hassan Mourtada - CV.pdf"
-            download="Hassan Mourtada - CV.pdf"
+            href={resumeHref}
+            download={resumeFileName}
             className="btn action-btn"
+            data-analytics-cta="download_resume"
+            onClick={handleResumeClick}
           >
             Download my resume
           </a>
           <div className="ps-sm-5">
-            <ContactInfo />
+            <ContactInfo ctaLocation="hero" />
           </div>
         </div>
       </div>

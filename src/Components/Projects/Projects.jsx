@@ -1,11 +1,25 @@
 import "./Projects.css";
 import { projects } from "../../data/Projects";
+import {
+  getDestinationType,
+  sanitizeLinkUrl,
+  trackProjectClick,
+  trackProjectDemoClick,
+} from "../../lib/analytics";
 
 const Projects = () => {
+  const getProjectAnalytics = (project) => ({
+    project_name: project.title,
+    project_category: "client_project",
+    tech_stack: project.stack,
+    featured: false,
+  });
+
   return (
     <section
       id="projects"
       className="projects-wrapper container-lg d-flex flex-column gap-4"
+      data-analytics-section="projects"
     >
       <div>
         <h2>Projects</h2>
@@ -17,6 +31,12 @@ const Projects = () => {
           <div
             key={project.id}
             className="project-card row g-0 justify-content-center align-items-start align-items-sm-center"
+            data-analytics-project={project.id}
+            data-project-name={project.title}
+            data-project-category="client_project"
+            data-tech-stack={project.stack.join(", ")}
+            data-featured="false"
+            data-cta-location="projects_section"
           >
             <div className="content-card col-12 col-lg-6 d-flex flex-column gap-3 gap-sm-4">
               <div>
@@ -43,6 +63,16 @@ const Projects = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="btn action-btn live-demo"
+                    data-analytics-cta={`${project.id}_live_demo`}
+                    onClick={() =>
+                      trackProjectDemoClick({
+                        ...getProjectAnalytics(project),
+                        cta_location: "projects_primary_cta",
+                        link_label: "live_demo",
+                        link_url: sanitizeLinkUrl(project.liveUrl),
+                        destination_type: getDestinationType(project.liveUrl),
+                      })
+                    }
                   >
                     View Live Website
                   </a>
@@ -64,6 +94,15 @@ const Projects = () => {
                 href={project.liveUrl}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() =>
+                  trackProjectClick({
+                    ...getProjectAnalytics(project),
+                    cta_location: "projects_image",
+                    link_label: "project_preview",
+                    link_url: sanitizeLinkUrl(project.liveUrl),
+                    destination_type: getDestinationType(project.liveUrl),
+                  })
+                }
               >
                 <img
                   src={project.image}

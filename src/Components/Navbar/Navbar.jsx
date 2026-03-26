@@ -3,16 +3,52 @@ import "./Navbar.css";
 import { RiMenu2Fill } from "react-icons/ri";
 import { RxCross2 } from "react-icons/rx";
 import { IoLogoGithub } from "react-icons/io";
+import {
+  trackMobileMenuItemClick,
+  trackMobileMenuOpen,
+  trackNavClick,
+  trackSocialClick,
+} from "../../lib/analytics";
 
 const Navbar = () => {
   const [expanded, setExpanded] = useState(false);
 
-  const toggleNavbar = () => {
-    setExpanded(!expanded);
+  const getNavType = () =>
+    window.matchMedia("(max-width: 991.98px)").matches ? "mobile" : "desktop";
+
+  const handleNavClick = (targetSection) => {
+    const navType = getNavType();
+
+    trackNavClick({
+      target_section: targetSection,
+      nav_type: navType,
+      cta_location: "navbar",
+    });
+
+    if (navType === "mobile") {
+      trackMobileMenuItemClick({
+        target_section: targetSection,
+        nav_type: navType,
+        cta_location: "navbar",
+      });
+    }
+
+    setExpanded(false);
   };
 
-  const closeNavbar = () => {
-    setExpanded(false);
+  const toggleNavbar = () => {
+    setExpanded((currentExpanded) => {
+      const nextExpanded = !currentExpanded;
+
+      if (nextExpanded) {
+        trackMobileMenuOpen({
+          nav_type: "mobile",
+          cta_location: "navbar",
+        });
+      }
+
+      return nextExpanded;
+    });
   };
 
   return (
@@ -44,22 +80,42 @@ const Navbar = () => {
         >
           <ul className="navbar-nav me-auto mb-2 mb-lg-0 align-items-start">
             <li className="nav-item">
-              <a className="nav-link" href="/" onClick={closeNavbar}>
+              <a
+                className="nav-link"
+                href="#header"
+                data-analytics-nav="hero"
+                onClick={() => handleNavClick("hero")}
+              >
                 Home
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#about" onClick={closeNavbar}>
+              <a
+                className="nav-link"
+                href="#about"
+                data-analytics-nav="about"
+                onClick={() => handleNavClick("about")}
+              >
                 About
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#skills" onClick={closeNavbar}>
+              <a
+                className="nav-link"
+                href="#skills"
+                data-analytics-nav="skills"
+                onClick={() => handleNavClick("skills")}
+              >
                 Skills
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#projects" onClick={closeNavbar}>
+              <a
+                className="nav-link"
+                href="#projects"
+                data-analytics-nav="projects"
+                onClick={() => handleNavClick("projects")}
+              >
                 Projects
               </a>
             </li>
@@ -67,7 +123,8 @@ const Navbar = () => {
               <a
                 className="nav-link"
                 href="#personal-projects"
-                onClick={closeNavbar}
+                data-analytics-nav="personal_projects"
+                onClick={() => handleNavClick("personal_projects")}
               >
                 Personal Projects
               </a>
@@ -80,7 +137,15 @@ const Navbar = () => {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="View Hassan Mourtada's GitHub profile"
-            onClick={closeNavbar}
+            onClick={() => {
+              trackSocialClick({
+                actionType: "github_click",
+                ctaLocation: "navbar",
+                linkLabel: "github_profile",
+                linkUrl: "https://github.com/Mourtada15",
+              });
+              setExpanded(false);
+            }}
           >
             <IoLogoGithub />
           </a>

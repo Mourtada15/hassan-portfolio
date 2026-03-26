@@ -3,6 +3,10 @@ import "./App.css";
 import Home from "./Pages/Home/Home";
 import { useEffect } from "react";
 import ScrollToTopButton from "./Components/ScrollToTopButton/ScrollToTopButton";
+import { initAnalytics } from "./lib/analytics";
+import { usePageTracking } from "./hooks/usePageTracking";
+import { useSectionTracking } from "./hooks/useSectionTracking";
+import { useEngagementTracking } from "./hooks/useEngagementTracking";
 
 const ScrollToHashElement = () => {
   const { hash } = useLocation();
@@ -58,6 +62,14 @@ const ScrollToTop = () => {
 };
 
 function App() {
+  usePageTracking();
+  useSectionTracking();
+  useEngagementTracking();
+
+  useEffect(() => {
+    initAnalytics();
+  }, []);
+
   return (
     <>
       <main>

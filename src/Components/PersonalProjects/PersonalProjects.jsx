@@ -1,5 +1,11 @@
 import "./PersonalProjects.css";
 import { personalProjects } from "../../data/PersonalProjects";
+import {
+  getDestinationType,
+  sanitizeLinkUrl,
+  trackProjectDemoClick,
+  trackProjectRepoClick,
+} from "../../lib/analytics";
 
 const panelLayoutClasses = [
   "panel-xl",
@@ -10,11 +16,19 @@ const panelLayoutClasses = [
 ];
 
 const PersonalProjects = () => {
+  const getProjectAnalytics = (project) => ({
+    project_name: project.title,
+    project_category: "personal_project",
+    tech_stack: project.stack,
+    featured: false,
+  });
+
   return (
     <section
       id="personal-projects"
       className="personal-projects-wrapper container-lg d-flex flex-column gap-5"
       aria-labelledby="personal-projects-title"
+      data-analytics-section="personal_projects"
     >
       <div className="personal-projects-heading">
         <p className="personal-projects-kicker mb-2">Build Log</p>
@@ -42,7 +56,16 @@ const PersonalProjects = () => {
           const sourceMode = project.repoUrl ? "Public" : "Private";
 
           return (
-            <article key={project.id} className="personal-project-showcase">
+            <article
+              key={project.id}
+              className="personal-project-showcase"
+              data-analytics-project={project.id}
+              data-project-name={project.title}
+              data-project-category="personal_project"
+              data-tech-stack={project.stack.join(", ")}
+              data-featured="false"
+              data-cta-location="personal_projects_section"
+            >
               <div className="personal-project-hero">
                 <span className="personal-project-number" aria-hidden="true">
                   {projectNumber}
@@ -111,6 +134,18 @@ const PersonalProjects = () => {
                           rel="noopener noreferrer"
                           className="personal-project-link"
                           aria-label={`View ${project.title} live website`}
+                          data-analytics-cta={`${project.id}_live_build`}
+                          onClick={() =>
+                            trackProjectDemoClick({
+                              ...getProjectAnalytics(project),
+                              cta_location: "personal_projects_live_build",
+                              link_label: "live_demo",
+                              link_url: sanitizeLinkUrl(project.liveUrl),
+                              destination_type: getDestinationType(
+                                project.liveUrl,
+                              ),
+                            })
+                          }
                         >
                           Open Live Build
                         </a>
@@ -122,6 +157,18 @@ const PersonalProjects = () => {
                           rel="noopener noreferrer"
                           className="personal-project-link personal-project-link-secondary"
                           aria-label={`View ${project.title} GitHub repository`}
+                          data-analytics-cta={`${project.id}_repo`}
+                          onClick={() =>
+                            trackProjectRepoClick({
+                              ...getProjectAnalytics(project),
+                              cta_location: "personal_projects_repo",
+                              link_label: "source_repository",
+                              link_url: sanitizeLinkUrl(project.repoUrl),
+                              destination_type: getDestinationType(
+                                project.repoUrl,
+                              ),
+                            })
+                          }
                         >
                           Inspect Source
                         </a>

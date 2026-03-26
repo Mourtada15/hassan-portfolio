@@ -3,7 +3,11 @@ import Icon from "../../assets/about01.png";
 
 const About = () => {
   return (
-    <section id="about" className="about-wrapper container-lg">
+    <section
+      id="about"
+      className="about-wrapper container-lg"
+      data-analytics-section="about"
+    >
       <div className="row g-0 align-items-center justify-content-between flex-column flex-lg-row">
         <div className="about-intro col-8 d-flex justify-content-center flex-column gap-3">
           <div>
