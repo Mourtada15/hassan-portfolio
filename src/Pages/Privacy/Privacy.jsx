@@ -1,10 +1,20 @@
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 import Footer from "../../Components/Footer/Footer";
 import "./Privacy.css";
 
 const LAST_UPDATED = "March 27, 2026";
 
 const Privacy = () => {
+  useEffect(() => {
+    const previousTitle = document.title;
+    document.title = "Privacy Policy | Hassan Mourtada";
+
+    return () => {
+      document.title = previousTitle;
+    };
+  }, []);
+
   return (
     <>
       <section className="privacy-page">
