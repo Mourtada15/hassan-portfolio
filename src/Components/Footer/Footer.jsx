@@ -1,6 +1,7 @@
 import "./Footer.css";
 import { IoLogoGithub, IoLogoLinkedin } from "react-icons/io";
 import { GrMail } from "react-icons/gr";
+import { NavLink } from "react-router-dom";
 import { trackContactAction, trackSocialClick } from "../../lib/analytics";
 
 const Footer = () => {
@@ -17,6 +18,17 @@ const Footer = () => {
       <small className="mb-3 text-center">
         Designed with care ❤️ | © {year} Hassan Mourtada. All rights reserved.
       </small>
+
+      <div className="footer-links d-flex align-items-center justify-content-center flex-wrap gap-3 mb-4">
+        <NavLink
+          className={({ isActive }) =>
+            `footer-link${isActive ? " is-active" : ""}`
+          }
+          to="/privacy"
+        >
+          Privacy Policy
+        </NavLink>
+      </div>
 
       <div className="socials-wrapper d-flex gap-3">
         <a

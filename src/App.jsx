@@ -1,6 +1,7 @@
 import { Route, Routes, useLocation } from "react-router-dom";
 import "./App.css";
 import Home from "./Pages/Home/Home";
+import Privacy from "./Pages/Privacy/Privacy";
 import { useEffect } from "react";
 import ScrollToTopButton from "./Components/ScrollToTopButton/ScrollToTopButton";
 import { initAnalytics } from "./lib/analytics";
@@ -77,6 +78,7 @@ function App() {
         <ScrollToTop />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/privacy" element={<Privacy />} />
         </Routes>
         <ScrollToTopButton />
       </main>

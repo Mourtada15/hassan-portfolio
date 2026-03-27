@@ -4,6 +4,28 @@
   border-top: 1px solid #ff715a;
 }
 
+.footer-links {
+  min-height: 1.5rem;
+}
+
+.footer-link {
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+
+.footer-link:hover,
+.footer-link.is-active {
+  color: #55c2a0;
+}
+
+.footer-link:focus-visible {
+  outline: 2px solid #55c2a0;
+  outline-offset: 4px;
+  border-radius: 8px;
+}
+
 .socials-icons {
   font-size: 2rem;
   transition: all 0.2s ease-in-out;
