@@ -35,6 +35,8 @@ VITE_ANALYTICS_DEBUG=true
 VITE_PORTFOLIO_VERSION=2026-03
 ```
 
+`VITE_ANALYTICS_DEBUG` is intended for local development. Leave it `false` for production builds so GA4 events are not marked as debug traffic.
+
 You can start from [.env.example](/mnt/c/Users/user/Documents/hassan-portfolio/.env.example).
 
 ### How to get the IDs
@@ -82,7 +84,7 @@ Clarity tags are set for:
 
 1. Copy `.env.example` to `.env.local` and fill in real IDs.
 2. Run `npm run dev`.
-3. Set `VITE_ANALYTICS_DEBUG=true` if you want dev-only console logs for fired events.
+3. Set `VITE_ANALYTICS_DEBUG=true` if you want local dev console logs and GA DebugView events.
 4. Load the site with and without UTM parameters to confirm source classification.
 5. Click the resume CTA, navbar links, contact modal links, footer links, project live links, and repo links.
 6. Scroll the page past 25, 50, 75, and 90 percent and stay on the page for at least 30, 60, and 120 seconds.

@@ -70,7 +70,7 @@ const analyticsConfig = {
   enabled: parseBoolean(import.meta.env.VITE_ENABLE_ANALYTICS),
   gaMeasurementId: import.meta.env.VITE_GA_MEASUREMENT_ID || "",
   clarityProjectId: import.meta.env.VITE_CLARITY_PROJECT_ID || "",
-  debug: analyticsDebugEnabled,
+  debug: import.meta.env.DEV && analyticsDebugEnabled,
   consoleDebug: import.meta.env.DEV && analyticsDebugEnabled,
   portfolioVersion: import.meta.env.VITE_PORTFOLIO_VERSION || "current",
 };
