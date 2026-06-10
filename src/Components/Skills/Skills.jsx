@@ -1,7 +1,7 @@
 import "./Skills.css";
 
 const skills = [
-  "HTML5", "CSS3", "JavaScript", "React", "Vue.js",
+  "HTML5", "CSS3", "JavaScript", "React",
   "Node.js", "Express.js", "RESTful APIs",
   "MongoDB", "MySQL", "Git", "GitHub",
   "TypeScript", "JWT Authentication",

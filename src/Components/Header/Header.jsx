@@ -39,12 +39,16 @@ const Header = () => {
         <p className="m-0">Hi, I'm</p>
         <h1>Hassan Mourtada</h1>
         <p>
-          A <span style={{ color: "#55c2a0" }}>Full-Stack Developer</span> with
-          a systems mindset, specializing in building modern, scalable, and
-          high-performance web applications using the MERN stack. <br />I focus
-          on clean architecture, reliable delivery, and using AI-assisted
-          workflows to speed up development, improve debugging, and turn complex
-          ideas into maintainable digital products.
+          A{" "}
+          <span style={{ color: "#55c2a0" }}>React & JavaScript Developer</span>{" "}
+          <br />
+          I build modern, responsive web applications with React and JavaScript
+          and enjoy turning ideas into clean, maintainable, and user-focused
+          solutions.
+          <br />
+          Alongside my professional frontend experience, I completed intensive
+          full-stack web development training and continue expanding my
+          expertise through hands-on MERN projects.
         </p>
         <div className="d-flex align-items-center justify-content-between justify-content-sm-start mt-4">
           <a
