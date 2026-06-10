@@ -16,7 +16,7 @@ const Footer = () => {
       <h2 className="mb-3">Hassan Mourtada</h2>
 
       <small className="mb-3 text-center">
-        Designed with care ❤️ | © {year} Hassan Mourtada. All rights reserved.
+        © {year} Hassan Mourtada. Built with React & Vite
       </small>
 
       <div className="footer-links d-flex align-items-center justify-content-center flex-wrap gap-3 mb-4">

@@ -25,10 +25,9 @@ const About = () => {
               completed an intensive 6-month Full-Stack Web Development
               bootcamp, where I gained practical experience with the MERN stack
               (MongoDB, Express.js, React, and Node.js). Since then, I've
-              continued expanding my skills by independently designing and
-              building full-stack MERN projects, implementing REST APIs,
-              authentication, database integration, and responsive user
-              interfaces.
+              continued expanding my skills by building full-stack MERN projects
+              that include REST APIs, authentication, database integration, and
+              responsive user interfaces.
             </p>
             <p>
               I enjoy learning continuously, writing clean and maintainable

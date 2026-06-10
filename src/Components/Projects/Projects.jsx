@@ -22,7 +22,7 @@ const Projects = () => {
       data-analytics-section="projects"
     >
       <div>
-        <h2>Experience</h2>
+        <h2>Client Work</h2>
         <hr style={{ color: "#ff715a" }} />
       </div>
 
