@@ -8,8 +8,8 @@ import {
 } from "../../lib/analytics";
 
 const Header = () => {
-  const resumeHref = "/Hassan Mourtada - CV.pdf";
-  const resumeFileName = "Hassan Mourtada - CV.pdf";
+  const resumeHref = "/Hassan Mourtada_CV.docx.pdf";
+  const resumeFileName = "Hassan Mourtada_CV.docx.pdf";
 
   const handleResumeClick = () => {
     trackResumeDownload({
